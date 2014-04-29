@@ -49,7 +49,7 @@ public class Response {
 	public void loadXmlFromBase64(String response)
 			throws ParserConfigurationException, SAXException, IOException, DecoderException {
 		Base64 base64 = new Base64();
-		byte[] decodedB = (byte[]) base64.decode(response);
+		byte[] decodedB = (byte[]) base64.decode(response.getBytes());
 		String decodedS = new String(decodedB);
 		loadXml(decodedS);
 	}
